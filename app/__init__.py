@@ -5,16 +5,16 @@
 # Third-Party Imports
 
 # CUSTOM Imports
-from .model_1 import ModelOne
-from .model_2 import ModelTwo
+from .model_1 import ModelOneObject
+from .model_2 import ModelTwoObject
 
 
-def create_model_one(description=None):
-    ModelOne(description=description).create()
+def create_model_one_object(description=None):
+    ModelOneObject(description=description).create()
 
 
-def create_model_two(description=None):
-    ModelTwo(description=description).create()
+def create_model_two_object(description=None):
+    ModelTwoObject(description=description).create()
     
 
 def run(value=None):
@@ -24,8 +24,8 @@ def run(value=None):
         for i in range(0, int(value)):
             description = "Object %s" % i
             if i % 2 == 0:
-                create_model_two(description=description)
+                create_model_two_object(description=description)
             else:
-                create_model_one(description=description)
+                create_model_one_object(description=description)
     except ValueError:
         return 'Value must be an Integer'
