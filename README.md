@@ -1,7 +1,7 @@
 v1.0 Creating data structure
 ===
 
-First we create the data structure as follows
+First we create the data structure as follows:
 
 ~~~
 .
@@ -27,3 +27,10 @@ First we create the data structure as follows
 ├── requirements.txt
 └── run.py
 ~~~
+
+Set `run.py` as executable with:
+
+~~~
+$ chmod a+x run.py
+~~~
+
