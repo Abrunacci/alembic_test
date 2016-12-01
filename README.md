@@ -66,7 +66,7 @@ we install it executing...
 (alembic_test)[alembic_test] pip install -r requirements.txt
 ~~~
 
-v0.2 Creating connection and models 
+v0.2 Creating connection and models
 ===================================
 [tag](https://github.com/Abrunacci/alembic_test/tree/v0.2)
 
@@ -126,7 +126,7 @@ session = Session()
 On this example we create a sqlite database, if you want to change that and create other database connection, change the connection string with some of [this](http://docs.sqlalchemy.org/en/latest/core/engines.html)
 
 
-v0.3 Doing some stuff with data 
+v0.3 Doing some stuff with data
 ===============================
 [tag](https://github.com/Abrunacci/alembic_test/tree/v0.3)
 
@@ -245,7 +245,7 @@ if __name__ == '__main__':
 ~~~
 
 
-v0.4 Configuring Alembic 
+v0.4 Configuring Alembic
 ========================
 [tag](https://github.com/Abrunacci/alembic_test/tree/v0.4)
 
@@ -329,7 +329,7 @@ and replace the line `target_metadata = None` with:
 target_metadata = Base.metadata
 ~~~
 
-v0.5 Ready to go... 
+v0.5 Ready to go...
 ===================
 [tag](https://github.com/Abrunacci/alembic_test/tree/v0.5)
 
