@@ -27,16 +27,18 @@ def list_model_two_objects():
 
 def run(value=None):
     if not value:
-        return 'You must insert a value'
+        print('You must insert a value')
     try:
+        print('Creating %s objects. Please, wait...' % value)
         for i in range(0, int(value)):
             description = "Object %s" % i
             if i % 2 == 0:
                 create_model_two_object(description=description)
             else:
                 create_model_one_object(description=description)
+        print('Finished.')
     except ValueError:
-        return 'Value must be an Integer'
+        print('Value must be an Integer')
 
 
 def list():

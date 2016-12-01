@@ -10,7 +10,8 @@ from sqlalchemy.orm import sessionmaker
 
 # DB CONFIGURATION
 
-DB_STRING = 'postgresql://alembic:test@localhost:5432/alembic_test'
+# DB_STRING = 'postgresql://alembic:test@localhost:5432/alembic_test'
+DB_STRING = 'sqlite:///alembic_test.db'
 
 engine = create_engine(DB_STRING)
 Base = declarative_base(bind=engine)
