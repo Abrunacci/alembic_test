@@ -395,7 +395,7 @@ INFO  [alembic.runtime.migration] Running upgrade  -> 6b924b946ceb, First migrat
     import sys
     # ..
     value = sys.argv[1]
-    ~~~
+~~~
 
 > and modify...  
 
@@ -404,7 +404,7 @@ INFO  [alembic.runtime.migration] Running upgrade  -> 6b924b946ceb, First migrat
     run(value=value)
     ~~~
 
->> sorry about this.
+> sorry about this.
 
 And we have the database created whit all the tables so if we run...
 ~~~
