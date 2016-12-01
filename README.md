@@ -50,4 +50,27 @@ we install it executing...
 (alembic_test)$ pip install -r requirements.txt
 ~~~
 
-Go to v0.2 tag...
+v2.0 Creating connection and models
+===================================
+
+We add the following code in 'model_1 / models.py' where we declare a class called 'ModelOne' that inherits from Base (now will fail, but we will deal with this later) and contains 3 columns:
+
+~~~
+# Standard Lib Imports
+
+# Third-Party Imports
+from sqlalchemy import Column, String, Integer, Boolean
+
+# CUSTOM Imports
+from ..config import Base
+
+
+class ModelOne(Base):
+    __tablename__ = 'model_one'
+    id = Column(Integer, primary_key=True, index=True)
+    description = Column(String(256))
+    enabled = Column(Boolean, default=True)
+~~~
+
+Repeat the process on `model_2/models.py` changing `class ModelOne` for `class ModelTwo` and `__tablename__ = 'model_one'` for `__tablename__ = 'model_two'`
+
