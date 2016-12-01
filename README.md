@@ -1,5 +1,5 @@
-v1.0 Creating data structure
-===
+v0.1 Creating data structure
+============================
 
 First we create the data structure as follows:
 
@@ -50,7 +50,7 @@ we install it executing...
 (alembic_test)$ pip install -r requirements.txt
 ~~~
 
-v2.0 Creating connection and models
+v0.2 Creating connection and models
 ===================================
 
 We add the following code in `app/model_1 / models.py` where we declare a class called 'ModelOne' that inherits from Base (now will fail, but we will deal with this later) and contains 3 columns:
@@ -107,3 +107,7 @@ session = Session()
 ~~~
 
 On this example we create a sqlite database, if you want to change that and create other database connection, change the connection string with some of [this](http://docs.sqlalchemy.org/en/latest/core/engines.html)
+
+
+v0.3 Doing some stuff with data
+===============================
