@@ -1,5 +1,20 @@
-v0.1 Creating data structure
-============================
+Make SQLAlchemy, Alembic and Python3 work in 5 steps
+====================================================
+
+This tutorial is just one way to make it work. I upload this as a guide to me... and hopefully, it will be useful to someone else.
+
+Most of the guides I saw create the models in a single file, which is not bad if we only have 2 or 3 models, but if we are creating an application that can escalate, we will prefer to do so in a way that each Module of the application, contain the model that belongs to it. That's why I do this 'tutorial'
+
+### Index
+
+1. [v0.1 Creating data structure](https://github.com/Abrunacci/alembic_test/tree/master#v01-creating-data-structure)
+2. [v0.2 Creating connection and models](https://github.com/Abrunacci/alembic_test/tree/master#v02-creating-connection-and-models)
+3. [v0.3 Doing some stuff with data](https://github.com/Abrunacci/alembic_test/tree/master#v03-doing-some-stuff-with-data)
+4. [v0.4 Configuring Alembic](https://github.com/Abrunacci/alembic_test/tree/master#v04-configuring-alembic)
+5. [v0.5 Ready to go...](https://github.com/Abrunacci/alembic_test/tree/master#v05-ready-to-go)
+
+v0.1 Creating data structure [tag](https://github.com/Abrunacci/alembic_test/tree/v0.1)
+=======================================================================================
 
 First we create the data structure as follows:
 
@@ -50,8 +65,8 @@ we install it executing...
 (alembic_test)[alembic_test] pip install -r requirements.txt
 ~~~
 
-v0.2 Creating connection and models
-===================================
+v0.2 Creating connection and models [tav](https://github.com/Abrunacci/alembic_test/tree/v0.2)
+==============================================================================================
 
 We add the following code in `app/model_1 / models.py` where we declare a class called 'ModelOne' that inherits from Base (now will fail, but we will deal with this later) and contains 3 columns:
 
@@ -109,8 +124,8 @@ session = Session()
 On this example we create a sqlite database, if you want to change that and create other database connection, change the connection string with some of [this](http://docs.sqlalchemy.org/en/latest/core/engines.html)
 
 
-v0.3 Doing some stuff with data
-===============================
+v0.3 Doing some stuff with data [tag](https://github.com/Abrunacci/alembic_test/tree/v0.3)
+==========================================================================================
 
 We add the following code in `app/model_1 / __init__.py` where we declare a class called 'ModelOneObject'.
 
@@ -227,8 +242,8 @@ if __name__ == '__main__':
 ~~~
 
 
-v0.4 Configuring Alembic
-========================
+v0.4 Configuring Alembic [tag](https://github.com/Abrunacci/alembic_test/tree/v0.4)
+===================================================================================
 
 This process is really simple and fast... said nobody ever. But! we are here to make it fast.
 
@@ -310,8 +325,8 @@ and replace the line `target_metadata = None` with:
 target_metadata = Base.metadata
 ~~~
 
-v0.5 Ready to go...
-===================
+v0.5 Ready to go... [tag](https://github.com/Abrunacci/alembic_test/tree/v0.5)
+==============================================================================
 
 ok, we already installed the requirements, inserted the code, initiated alembic and configure it... What now?
 
