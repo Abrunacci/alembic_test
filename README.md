@@ -53,7 +53,7 @@ we install it executing...
 v2.0 Creating connection and models
 ===================================
 
-We add the following code in 'model_1 / models.py' where we declare a class called 'ModelOne' that inherits from Base (now will fail, but we will deal with this later) and contains 3 columns:
+We add the following code in `app/model_1 / models.py` where we declare a class called 'ModelOne' that inherits from Base (now will fail, but we will deal with this later) and contains 3 columns:
 
 ~~~
 # Standard Lib Imports
@@ -72,5 +72,21 @@ class ModelOne(Base):
     enabled = Column(Boolean, default=True)
 ~~~
 
-Repeat the process on `model_2/models.py` changing `class ModelOne` for `class ModelTwo` and `__tablename__ = 'model_one'` for `__tablename__ = 'model_two'`
+Repeat the process on `app/model_2/models.py` replacing lines 10 and 11 with:
 
+~~~
+# ...
+class ModelOne(Base):
+    __tablename__ = 'model_one'
+# ...
+~~~
+
+
+Now we add the following code to `app/config.py` to start the database connection:
+
+~~~
+# ...
+class ModelOne(Base):
+    __tablename__ = 'model_one'
+# ...
+~~~
