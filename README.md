@@ -10,25 +10,16 @@ First we create the data structure as follows:
 │   ├── __init__.py
 │   ├── model_1
 │   │   ├── __init__.py
-│   │   ├── models.py
-│   │   └── __pycache__
-│   │       ├── __init__.cpython-34.pyc
-│   │       └── models.cpython-34.pyc
-│   ├── model_2
-│   │   ├── __init__.py
-│   │   ├── models.py
-│   │   └── __pycache__
-│   │       ├── __init__.cpython-34.pyc
-│   │       └── models.cpython-34.pyc
-│   └── __pycache__
-│       ├── config.cpython-34.pyc
-│       └── __init__.cpython-34.pyc
+│   │   └── models.py
+│   └── model_2
+│       ├── __init__.py
+│       └── models.py
 ├── README.md
 ├── requirements.txt
 └── run.py
 ~~~
 
-Set `run.py` as executable with:
+Then we set `run.py` as executable with:
 
 ~~~
 $ chmod a+x run.py
