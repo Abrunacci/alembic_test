@@ -396,13 +396,14 @@ INFO  [alembic.runtime.migration] Running upgrade  -> 6b924b946ceb, First migrat
     # ..
     value = sys.argv[1]
     ~~~
->> and modify...  
+
+> and modify...  
 
 >> ~~~
     if __name__ == '__main__':
     run(value=value)
     ~~~
-    
+
 >> sorry about this.
 
 And we have the database created whit all the tables so if we run...
