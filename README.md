@@ -199,7 +199,7 @@ def run(value=None):
                 create_model_two_object(description=description)
             else:
                 create_model_one_object(description=description)
-        print('Creationg finished.')
+        print('Creation finished.')
         print('Model 1 Objects: %s' % ModelOneObject().list())
         print('Model 2 Objects: %s' % ModelTwoObject().list())
     except ValueError:
@@ -402,15 +402,17 @@ INFO  [alembic.runtime.migration] Running upgrade  -> 6b924b946ceb, First migrat
 >> ~~~
     if __name__ == '__main__':
     run(value=value)
-    ~~~
+~~~
 
 > sorry about this.
 
 And we have the database created whit all the tables so if we run...
 ~~~
-(alembic_test)[alembic_test] alembic upgrade head                                                                                                             master  ✭ ✱
-INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
-INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
-INFO  [alembic.runtime.migration] Running upgrade  -> 6b924b946ceb, First migration
+(alembic_test)[alembic_test] ./run.py 20                                                                                                                        master  ✭
+Creating 20 objects. Please, wait...
+Creation finished.
+Model 1 Objects: Object 1, Object 3, Object 5, Object 7, Object 9, Object 11, Object 13, Object 15, Object 17, Object 19
+Model 2 Objects: Object 0, Object 2, Object 4, Object 6, Object 8, Object 10, Object 12, Object 14, Object 16, Object 18
+(alembic_test)[alembic_test]   
 
 ~~~
