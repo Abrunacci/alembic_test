@@ -280,5 +280,27 @@ First we edit the line 32 on `alembic.ini` setting our connection string (same t
 sqlalchemy.url = sqlite:///alembic_test.db
 ~~~
 
-Then we add to `migrations/env.py` the following code on the line:
+Then we add to `migrations/env.py` the following code on the line to set the PYTHONPATH:
 
+~~~
+import sys
+import os
+# .. 
+
+
+parent_dir = os.path.abspath(os.path.join(os.getcwd(), "."))
+sys.path.append(parent_dir)
+# This is...
+
+~~~
+
+we import our Base
+
+~~~
+from app.config import Base
+~~~
+
+and replace the line `target_metadata = None` with:
+~~~
+target_metadata = Base.metadata
+~~~
