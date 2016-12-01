@@ -283,9 +283,10 @@ sqlalchemy.url = sqlite:///alembic_test.db
 Then we add to `migrations/env.py` the following code on the line to set the PYTHONPATH:
 
 ~~~
+# ...
 import sys
 import os
-# .. 
+# ...
 
 
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), "."))
@@ -294,9 +295,11 @@ sys.path.append(parent_dir)
 
 ~~~
 
-we import our Base
+we import our Base right after the added code
 
 ~~~
+parent_dir = os.path.abspath(os.path.join(os.getcwd(), "."))
+sys.path.append(parent_dir)
 from app.config import Base
 ~~~
 
