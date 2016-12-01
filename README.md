@@ -15,7 +15,7 @@ Most of the guides I saw create the models in a single file, which is not bad if
 
 v0.1 Creating data structure
 ============================
-[tag](https://github.com/Abrunacci/alembic_test/tree/v0.1)
+[tag](https://github.com/Abrunacci/alembic_test/tree/v0.1) - [index](https://github.com/Abrunacci/alembic_test/tree/master#index)
 
 First we create the data structure as follows:
 
@@ -68,7 +68,7 @@ we install it executing...
 
 v0.2 Creating connection and models
 ===================================
-[tag](https://github.com/Abrunacci/alembic_test/tree/v0.2)
+[tag](https://github.com/Abrunacci/alembic_test/tree/v0.2) - [index](https://github.com/Abrunacci/alembic_test/tree/master#index)
 
 We add the following code in `app/model_1 / models.py` where we declare a class called 'ModelOne' that inherits from Base (now will fail, but we will deal with this later) and contains 3 columns:
 
@@ -128,7 +128,7 @@ On this example we create a sqlite database, if you want to change that and crea
 
 v0.3 Doing some stuff with data
 ===============================
-[tag](https://github.com/Abrunacci/alembic_test/tree/v0.3)
+[tag](https://github.com/Abrunacci/alembic_test/tree/v0.3) - [index](https://github.com/Abrunacci/alembic_test/tree/master#index)
 
 We add the following code in `app/model_1 / __init__.py` where we declare a class called 'ModelOneObject'.
 
@@ -247,7 +247,7 @@ if __name__ == '__main__':
 
 v0.4 Configuring Alembic
 ========================
-[tag](https://github.com/Abrunacci/alembic_test/tree/v0.4)
+[tag](https://github.com/Abrunacci/alembic_test/tree/v0.4) - [index](https://github.com/Abrunacci/alembic_test/tree/master#index)
 
 This process is really simple and fast... said nobody ever. But! we are here to make it fast.
 
@@ -331,7 +331,7 @@ target_metadata = Base.metadata
 
 v0.5 Ready to go...
 ===================
-[tag](https://github.com/Abrunacci/alembic_test/tree/v0.5)
+[tag](https://github.com/Abrunacci/alembic_test/tree/v0.5) - [index](https://github.com/Abrunacci/alembic_test/tree/master#index)
 
 ok, we already installed the requirements, inserted the code, initiated alembic and configure it... What now?
 
