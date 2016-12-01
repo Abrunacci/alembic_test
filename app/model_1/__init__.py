@@ -15,3 +15,9 @@ class ModelOneObject(object):
         model_one = ModelOne(description=self.description)
         session.add(model_one)
         session.commit()
+    
+    def list(self):
+        objects = ", ".join([object.description
+                           for object
+                           in session.query(ModelOne).all()])
+        return objects

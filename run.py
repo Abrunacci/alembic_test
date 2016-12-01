@@ -5,12 +5,12 @@ import sys
 # Third-Party Imports
 
 # CUSTOM Imports
-from app import run
+from app import run, list
 
 
 VALUE = sys.argv[1]
 
 
 if __name__ == '__main__':
-    print(run(VALUE))
-
+    # print(run(VALUE))
+    list()
