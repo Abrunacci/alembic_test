@@ -111,3 +111,47 @@ On this example we create a sqlite database, if you want to change that and crea
 
 v0.3 Doing some stuff with data
 ===============================
+
+We add the following code in `app/model_1 / __init__.py` where we declare a class called 'ModelOneObject'.
+
+This class is simple, the `__init__()` receives one argument called description, this is used in `create()` 
+
+~~~
+# Standard Lib Imports
+
+# Third-Party Imports
+
+# CUSTOM Imports
+from .models import ModelOne
+from ..config import session
+
+
+class ModelOneObject(object):
+    """
+    ModelOne Object
+    Parameters:
+     description - String
+    """
+    def __init__(self, description=None):
+        self.description = description
+    
+    def create(self):
+        """ This function insert an 'ModelOne' object in the database"""
+        model_one = ModelOne(description=self.description)
+        session.add(model_one)
+        session.commit()
+    
+    def list(self):
+        """ This function lists all the 'ModelOne' objects from the database"""
+        objects = ", ".join([object.description
+                             for object
+                             in session.query(ModelOne).all()])
+        return objects
+~~~
+
+we duplicate this code on `app/model_2/__init__.py` but replacing all the ModelOne references with ModelTwo (and changing the class name to 'ModelTwoObject').
+
+Now we create the `app/__init__.py` file with this code:
+
+
+ 
