@@ -212,15 +212,17 @@ And finally, we add this code on `run.py`
 #! /usr/bin/env python
 
 # Standard Lib Imports
-
+import sys
 # Third-Party Imports
 
 # CUSTOM Imports
 from app import run
 
+VALUE = sys.argv[1]
+
 
 if __name__ == '__main__':
-    run()
+    run(value=VALUE)
 
 ~~~
 
@@ -387,25 +389,6 @@ INFO  [alembic.runtime.migration] Running upgrade  -> 6b924b946ceb, First migrat
 
 ~~~
 
-
-> NOTE: at this point I detect an error on v0.2, we have to add this on 'run.py':
-
->> ~~~
-    # Standard Lib Imports
-    import sys
-    # ..
-    value = sys.argv[1]
-~~~
-
-> and modify...  
-
->> ~~~
-    if __name__ == '__main__':
-    run(value=value)
-~~~
-
-> sorry about this.
-
 And we have the database created whit all the tables so if we run...
 ~~~
 (alembic_test)[alembic_test] ./run.py 20                                                                                                                        master  ✭
@@ -413,6 +396,4 @@ Creating 20 objects. Please, wait...
 Creation finished.
 Model 1 Objects: Object 1, Object 3, Object 5, Object 7, Object 9, Object 11, Object 13, Object 15, Object 17, Object 19
 Model 2 Objects: Object 0, Object 2, Object 4, Object 6, Object 8, Object 10, Object 12, Object 14, Object 16, Object 18
-(alembic_test)[alembic_test]   
-
 ~~~
