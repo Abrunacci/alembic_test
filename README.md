@@ -93,8 +93,8 @@ Repeat the process on `app/model_2/models.py` replacing lines 10 and 11 with:
 
 ~~~
 # ...
-class ModelOne(Base):
-    __tablename__ = 'model_one'
+class ModelTwo(Base):
+    __tablename__ = 'model_two'
 # ...
 ~~~
 
